@@ -5,12 +5,12 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = ({ entry, filename, mode }) => {
   const devMode = mode !== "production";
-  console.log(devMode);
   return {
     mode: mode,
+    watch: devMode,
     entry: path.resolve(__dirname, "../", entry, "index.js"),
     output: {
-      path: path.resolve(__dirname, `../dist/${filename}`),
+      path: path.resolve(__dirname, `../dist/${filename}/`),
       filename: `${filename}.all.js`
     },
     optimization: {
@@ -32,7 +32,7 @@ module.exports = ({ entry, filename, mode }) => {
     module: {
       rules: [
         { test: /\.vue$/, use: "vue-loader" },
-        { test: /\.(tpl)$/, use: "raw-loader" },
+        { test: /\.tpl|xtpl$/, use: "raw-loader" },
         {
           test: /\.js$/,
           use: {
@@ -43,7 +43,8 @@ module.exports = ({ entry, filename, mode }) => {
         {
           test: /\.css|scss$/,
           use: [
-            devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+            // devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+            MiniCssExtractPlugin.loader,
             "css-loader",
             "postcss-loader",
             "sass-loader"

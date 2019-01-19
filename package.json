@@ -29,5 +29,7 @@
     "webpack-cli": "^3.2.1",
     "webpack-stream": "^5.2.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "vue": "^2.5.22"
+  }
 }
