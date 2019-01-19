@@ -1,4 +1,22 @@
 {
   "presets": ["@babel/preset-env"],
-  "plugins": ["@babel/plugin-transform-runtime"]
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    [
+      "component",
+      {
+        "libraryName": "element-ui",
+        "styleLibraryName": "theme-chalk"
+      }
+    ],
+    [
+      "import",
+      {
+        "libraryName": "vant",
+        "libraryDirectory": "es",
+        "style": true
+      },
+      "vant"
+    ]
+  ]
 }
