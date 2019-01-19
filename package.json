@@ -1,0 +1,33 @@
+{
+  "name": "independent-construction-environment",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development node ./script.js",
+    "dist": "cross-env NODE_ENV=production node ./script.js "
+  },
+  "author": "bendjen",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
+    "autoprefixer": "^9.4.5",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-component": "^1.1.1",
+    "cross-env": "^5.2.0",
+    "css-loader": "^2.1.0",
+    "gulp": "^4.0.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-loader": "^3.0.0",
+    "raw-loader": "^1.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.1.1",
+    "vue-loader": "^15.5.1",
+    "webpack-cli": "^3.2.1",
+    "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {}
+}
