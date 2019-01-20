@@ -4,7 +4,7 @@ const fs = require("fs");
 const webpackStream = require("webpack-stream");
 
 const webpackConfigGenerator = require("../config/webpack.config");
-const rmdir = require("./utils/rmdir");
+const removeFolder = require("./utils/removeFolder");
 const rootDir = path.resolve(__dirname, "../");
 
 const scriptPath = process.argv[process.argv.length - 1];
@@ -23,7 +23,7 @@ const config = {
 };
 const webpackConfig = webpackConfigGenerator(config);
 
-rmdir(outputDetailPath);
+removeFolder(outputDetailPath);
 fs.mkdirSync(outputDetailPath);
 
 gulp

@@ -1,0 +1,38 @@
+.teacherEditConatiner .line{
+    padding: 10px 40px;
+}
+.teacherEditConatiner .line .labelText{
+    padding-right: 20px;
+}
+.teacherEditConatiner .avatar-uploader .el-upload {
+    border: 1px dashed #d9d9d9;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.teacherEditConatiner .avatar-uploader .el-upload:hover {
+    border-color: #409EFF;
+}
+.teacherEditConatiner .avatar-uploader-icon {
+    font-size: 28px;
+    color: #8c939d;
+    width: 178px;
+    height: 178px;
+    line-height: 178px;
+    text-align: center;
+}
+.teacherEditConatiner .avatar {
+    width: 178px;
+    height: 178px;
+    display: block;
+}
+.teacherEditConatiner .el-upload__input{
+    display: none!important;
+}
+.teacherEditConatiner .tag{
+    background-color: #fff8a3;
+    padding: 10px 20px;
+    margin:0; 
+    margin-bottom: 10px;
+}

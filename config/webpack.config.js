@@ -25,6 +25,9 @@ module.exports = ({ entry, filename, mode, output }) => {
         new OptimizeCSSAssetsPlugin({})
       ]
     },
+    externals: {
+      vue: "Vue"
+    },
     plugins: [
       new MiniCssExtractPlugin({
         filename: `${filename}.all.css`,
@@ -35,6 +38,7 @@ module.exports = ({ entry, filename, mode, output }) => {
       rules: [
         { test: /\.vue$/, use: "vue-loader" },
         { test: /\.tpl|xtpl$/, use: "raw-loader" },
+        { test: /\.(ttf|eot|svg|woff|woff2)$/, use: "url-loader" },
         {
           test: /\.js$/,
           use: {

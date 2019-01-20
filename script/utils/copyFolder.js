@@ -1,5 +1,5 @@
 const fs = require("fs");
-module.exports = function(from, to) {
+module.exports = function copyFolder(from, to) {
   // 复制文件夹到指定目录
   let files = [];
   if (fs.existsSync(to)) {
