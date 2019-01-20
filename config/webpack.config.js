@@ -3,14 +3,16 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
-module.exports = ({ entry, filename, mode }) => {
+module.exports = ({ entry, filename, mode, output }) => {
   const devMode = mode !== "production";
+  const rootDir = path.resolve(__dirname, "../");
+
   return {
     mode: mode,
     watch: devMode,
-    entry: path.resolve(__dirname, "../", entry, "index.js"),
+    entry: entry,
     output: {
-      path: path.resolve(__dirname, `../dist/${filename}/`),
+      path: output,
       filename: `${filename}.all.js`
     },
     optimization: {
