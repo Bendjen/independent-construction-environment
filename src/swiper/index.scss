@@ -1,0 +1,60 @@
+#app{
+    padding: 100px 300px;
+    color:#4c4e53;
+    // .carousel{
+    //     transform: scale(0.3);
+    // }
+    .swiperContainer{
+        height: 320px;
+        width: 650px;
+        // border: 1px solid black;
+        position: relative;
+        .buttonContainer{
+            width: 100%;
+            position: absolute;
+            height: 100%;
+            font-size: 32px;
+            i{
+                cursor: pointer;
+            }
+        }
+    }
+    .carouselItem{
+        border: #ff9800 2px solid;
+        border-radius: 10px;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+    .leftSide{
+        width: 40%;
+        height: 300px;
+        p{
+            margin: 10px;
+        }
+        img{
+            width: 140px;
+            height:180px;
+            border: 1px solid #e5e5e5;
+            border-radius: 5px;
+        }
+        .name{
+            color: #ff9800;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .title{
+            font-size: 16px;
+        }
+    }
+    .rightSide{
+        width: 60%;
+        height: 260px;
+        p{
+            margin:10px;
+            overflow: hidden;
+            width: 90%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+}

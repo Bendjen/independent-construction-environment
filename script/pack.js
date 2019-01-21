@@ -23,6 +23,8 @@ const config = {
 };
 const webpackConfig = webpackConfigGenerator(config);
 
+//这里需要加一个判断是否存在dist文件夹，否则会报错，目前需要手动配置
+
 removeFolder(outputDetailPath);
 fs.mkdirSync(outputDetailPath);
 

@@ -15,14 +15,17 @@
 ## 开发环境编译项目
 
 ### npm run dev taskA
-快速编译 /src/taskA 形成静态资源在 /build/taskA，并启动watch监听更改自动构建
+快速编译 /src/taskA 形成静态资源在 /build/taskA，并启动watch监听更改自动构建,入口为 /src/taskA/index.js 
 ### npm run dev /taskA/moduleA
-快速编译 /src/taskA/moduleA 形成静态资源 /build/taskA/moduleA，并启动watch监听更改自动构建
+快速编译 /src/taskA/moduleA 形成静态资源 /build/taskA/moduleA，并启动watch监听更改自动构建,入口为 /src/taskA/index.js 
 
 
 ## 正式环境打包项目
 
 ### npm run dist taskA
-快速打包 /src/taskA 形成静态资源在 /build/taskA，并进行代码压缩
+快速打包 /src/taskA 形成静态资源在 /build/taskA，并进行代码压缩，入口为 /src/taskA/index.js 
 ### npm run dist /taskA/moduleA
-快速编译 /src/taskA/moduleA 形成静态资源 /build/taskA/moduleA，并进行代码压缩
+快速编译 /src/taskA/moduleA 形成静态资源 /build/taskA/moduleA，并进行代码压缩，入口为 /src/taskA/index.js 
+
+## 自行替换make模板
+将模板置于/script/template
