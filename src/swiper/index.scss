@@ -13,8 +13,9 @@
             width: 100%;
             position: absolute;
             height: 100%;
-            font-size: 32px;
-            i{
+            font-size: 32px; 
+            div{
+                z-index: 11;
                 cursor: pointer;
             }
         }
@@ -24,6 +25,8 @@
         border-radius: 10px;
         box-sizing: border-box;
         padding: 10px;
+        width: 550px;
+        height: 320px;;
     }
     .leftSide{
         width: 40%;
@@ -55,6 +58,15 @@
             width: 90%;
             text-overflow: ellipsis;
             white-space: nowrap;
+        }
+    }
+
+    .percent{
+        margin: 20px;
+        font-size: 22px;
+        em{
+            color: #ff9800;
+            font-style: normal;
         }
     }
 }
