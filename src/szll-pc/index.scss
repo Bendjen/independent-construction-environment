@@ -1,5 +1,5 @@
 #app{
-    padding: 100px 300px;
+    padding: 100px 20px;
     color:#4c4e53;
     // .carousel{
     //     transform: scale(0.3);
@@ -20,6 +20,32 @@
             }
         }
     }
+
+    .swiper-container-thumbs{
+        width: 2380px;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+
+    .my-container-thumbs{
+        transform: scale(0.4);
+        overflow: hidden;
+        position: relative;
+        top: -50px;
+    }
+
+    .thumbItem{
+        border: #ff9800 2px solid;
+        border-radius: 10px;
+        box-sizing: border-box;
+        position: relative;
+        cursor: pointer;
+    }
+    .slide-thumb-active{
+        border: 2px solid blue;
+        border-radius: 10px;
+    }
+    
     .carouselItem{
         border: #ff9800 2px solid;
         border-radius: 10px;
@@ -27,6 +53,17 @@
         padding: 10px;
         width: 550px;
         height: 320px;;
+        .showDetail{
+            cursor: pointer;
+            font-size: 14px;
+            color:#3ea5d8;
+            position: absolute;
+            right: 60px;
+            bottom: 10px;
+            &:hover{
+                color: #217df3;
+            }
+        }
     }
     .leftSide{
         width: 40%;
@@ -68,5 +105,22 @@
             color: #ff9800;
             font-style: normal;
         }
+    }
+}
+
+.detailDialog{
+    max-height: 600px;
+    overflow-y: auto;
+    img{
+        display: inline-block;
+        width: 140px;
+        height: 180px;
+        border: 1px solid #e5e5e5;
+        border-radius: 5px;
+    }
+    .popName{
+        color: #ff9800;
+        font-size: 16px;
+        font-weight: bold;
     }
 }

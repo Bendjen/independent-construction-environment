@@ -1,0 +1,155 @@
+#app{
+    color:#4c4e53;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    // .carousel{
+    //     transform: scale(0.3);
+    // }
+    .swiperContainer{
+        height: 14rem;
+        width: 100%;
+        // border: 1px solid black;
+        position: relative;
+        .buttonContainer{
+            width: 100%;
+            position: absolute;
+            height: 100%;
+            font-size: 26px; 
+            div{
+                z-index: 11;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .swiper-container-thumbs{
+        width: 58rem;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+
+    .my-container-thumbs{
+        transform: scale(0.4);
+        overflow: hidden;
+        position: relative;
+        top: -2rem;
+    }
+
+    .thumbItem{
+        border: #ff9800 2px solid;
+        border-radius: 10px;
+        box-sizing: border-box;
+        position: relative;
+        height: 12rem;
+        cursor: pointer;
+        padding: 0.4rem;
+        .leftSide,.rightSide{
+            height: 85%;
+        }
+    }
+    .slide-thumb-active{
+        border: 2px solid blue;
+        border-radius: 10px;
+    }
+    
+    .carouselItem{
+        border: #ff9800 2px solid;
+        border-radius: 10px;
+        box-sizing: border-box;
+        padding: 10px;
+        width: 85%;
+        height: 14rem;
+        position: relative;
+        .showDetail{
+            cursor: pointer;
+            font-size: 14px;
+            color:#3ea5d8;
+            position: absolute;
+            right: 0.6rem;
+            bottom: 0.6rem;
+            &:hover{
+                color: #217df3;
+            }
+        }
+    }
+    .leftSide{
+        width: 40%;
+        height: 16rem;
+        p{
+            margin: 10px;
+        }
+        img{
+            width: 6rem;
+            height:7rem;
+            border: 1px solid #e5e5e5;
+            border-radius: 5px;
+        }
+        .name{
+            color: #ff9800;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .title{
+            font-size: 12px;
+        }
+    }
+    .rightSide{
+        width: 60%;
+        height: 12rem;
+        p{
+            font-size: 14px;
+            margin:0.2rem;
+            overflow: hidden;
+            width: 90%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+
+    .percent{
+        margin: 1.4rem 0;
+        font-size: 20px;
+        em{
+            color: #ff9800;
+            font-style: normal;
+        }
+    }
+}
+
+.popUp{
+    font-size: 12px;
+    img{
+        width: 6rem;
+        height: 7rem;
+        border: 1px solid #e5e5e5;
+    }
+    .popTitle{
+        font-size: 14px;
+        height: 3rem;
+        padding: 0;
+        margin: 0;
+        line-height: 3rem;
+        padding-left:0.6rem; 
+        border-bottom: 1px solid #e5e5e5;
+    }
+    .popClose{
+        border-top: 1px solid #e5e5e5;
+        font-size: 14px;
+        height: 3rem;
+        padding: 0;
+        margin: 0;
+        line-height: 3rem;
+        text-align: center;
+    }
+    .popContent{
+        padding: 1.2rem 0.4rem;
+    }
+    .popName{
+        color: #ff9800;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    // width: 100%;
+    // max-height: 80%;
+}

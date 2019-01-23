@@ -1,10 +1,13 @@
 <div id="app" flex='dir:top main:center cross:center'>
 
+
+  <!-- mySwiper -->
   <div class='swiperContainer' flex='main:center cross:center'>
     <div class="swiper-container" style='z-index: 10;'>
       <div class="swiper-wrapper">
         <div class="swiper-slide" v-for="(item,index) in teacherList" :key="item.id" flex='main:center cross:center'>
           <div flex='main:start cross:center' class='carouselItem'>
+            <div class='showDetail' @click='dialogVisible=true'>查看详情</div>
             <div class='leftSide' flex='dir:top main:center cross:center'>
               <img :src="item.img" alt="">
               <p class='name'>{{item.name}}</p>
@@ -19,19 +22,28 @@
     </div>
 
     <div class='buttonContainer' flex='main:justify cross:center'>
-        <div><i class="el-icon-d-arrow-left" v-if='activeIndex > 0'></i></div>
-        <div><i class="el-icon-d-arrow-right" v-if='activeIndex < teacherList.length'></i></div>
+      <div>
+        <van-icon name="arrow-left" v-if='activeIndex > 0' @click='slidePrev' />
       </div>
+      <div>
+        <van-icon name="arrow" v-if='activeIndex < teacherList.length-1' @click='slideNext' />
+      </div>
+    </div>
   </div>
 
+  <!-- percent -->
   <div class='percent'> <em>{{activeIndex+1}}</em> / {{teacherList.length}}</div>
 
 
-  <div class='swiperContainer' flex='main:center cross:center'>
-      <div class="swiper-container-thumbs" style='z-index: 10;'>
+  <!-- thumb -->
+
+  <div style='position: relative; top:-1.6rem;width: 24rem;overflow: hidden;' flex='main:center cross:center'>
+    <div>
+      <!-- swiper的位置难以控制，需要给swiper-container-thumbs加上宽度，在外面自己加一层div控制位置 -->
+      <div class="swiper-container-thumbs">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" v-for="(item,index) in teacherList" :key="item.id" flex='main:center cross:center'>
-            <div flex='main:start cross:center' class='carouselItem'>
+          <div class="swiper-slide" v-for="(item,index) in teacherList" :key="item.id">
+            <div flex='main:start cross:center' class='thumbItem'>
               <div class='leftSide' flex='dir:top main:center cross:center'>
                 <img :src="item.img" alt="">
                 <p class='name'>{{item.name}}</p>
@@ -44,5 +56,26 @@
           </div>
         </div>
       </div>
+    </div>
+
+
+    <van-popup v-model="dialogVisible" position="bottom">
+      <div class='popUp'>
+        <p class='popTitle'>详情</p>
+        <div class='popContent' flex='dir:top main:center cross:center'>
+          <img :src="activeItem.img" alt="">
+          <p class='popName'>{{activeItem.name}}</p>
+          <div>
+            <p v-for='(item,index) in activeItem.cont' :key='index'>{{item}}</p>
+          </div>
+          <div>{{activeItem.desc}}</div>
+        </div>
+        <p class='popClose' @click="dialogVisible=false">关闭</p>
+      </div>
+    </van-popup>
+
+
+  </div>
+
 
 </div>
