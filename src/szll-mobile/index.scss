@@ -1,13 +1,13 @@
 #app{
     color:#4c4e53;
-    width: 100%;
     box-sizing: border-box;
     overflow: hidden;
+    position: relative;
     // .carousel{
     //     transform: scale(0.3);
     // }
     .swiperContainer{
-        height: 14rem;
+        height: 3rem;
         width: 100%;
         // border: 1px solid black;
         position: relative;
@@ -24,7 +24,7 @@
     }
 
     .swiper-container-thumbs{
-        width: 58rem;
+        width: 3rem;
         box-sizing: border-box;
         padding: 0 10px;
     }
@@ -41,7 +41,7 @@
         border-radius: 10px;
         box-sizing: border-box;
         position: relative;
-        height: 12rem;
+        height: 3rem;
         cursor: pointer;
         padding: 0.4rem;
         .leftSide,.rightSide{
@@ -75,7 +75,7 @@
     }
     .leftSide{
         width: 40%;
-        height: 16rem;
+        height: 4rem;
         p{
             margin: 10px;
         }
@@ -96,7 +96,7 @@
     }
     .rightSide{
         width: 60%;
-        height: 12rem;
+        height: 3rem;
         p{
             font-size: 14px;
             margin:0.2rem;

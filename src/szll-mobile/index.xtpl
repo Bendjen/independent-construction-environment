@@ -37,7 +37,7 @@
 
   <!-- thumb -->
 
-  <div style='position: relative; top:-1.6rem;width: 24rem;overflow: hidden;' flex='main:center cross:center'>
+  <div style='position: relative; top:-1.6rem;width: 4rem;overflow: hidden;' flex='main:center cross:center'>
     <div>
       <!-- swiper的位置难以控制，需要给swiper-container-thumbs加上宽度，在外面自己加一层div控制位置 -->
       <div class="swiper-container-thumbs">

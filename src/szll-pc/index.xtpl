@@ -54,7 +54,7 @@
       </div>
     </div>
 
-    <el-dialog title="详情" :visible.sync="dialogVisible" width="60%" :append-to-body='true'>
+    <el-dialog :visible.sync="dialogVisible" width="60%" :append-to-body='true'>
       <div class='detailDialog' flex='dir:top main:start cross:center'>
         <div>
           <img :src="activeItem.img" alt="">
@@ -62,7 +62,7 @@
 
         <p class='popName'>{{activeItem.name}}</p>
         <div>
-          <p v-for='(item,index) in activeItem.cont' :key='index'>{{item}}</p>
+          <p v-for='(item,index) in activeItem.cont' :key='index' style='text-align: center;margin: 10px;'>{{item}}</p>
         </div>
         <div style='margin-top: 20px'>{{activeItem.desc}}</div>
       </div>
