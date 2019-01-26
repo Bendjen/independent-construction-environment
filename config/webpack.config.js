@@ -15,16 +15,6 @@ module.exports = ({ entry, filename, mode, output }) => {
       path: output,
       filename: `${filename}.all.js`
     },
-    optimization: {
-      minimizer: [
-        new UglifyJsPlugin({
-          cache: true,
-          parallel: true,
-          sourceMap: true // set to true if you want JS source maps
-        }),
-        new OptimizeCSSAssetsPlugin({})
-      ]
-    },
     externals: {
       vue: "Vue"
     },
@@ -49,8 +39,8 @@ module.exports = ({ entry, filename, mode, output }) => {
         {
           test: /\.css|scss$/,
           use: [
-            // devMode ? "style-loader" : MiniCssExtractPlugin.loader,
-            MiniCssExtractPlugin.loader,
+            devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+            // MiniCssExtractPlugin.loader,
             "css-loader",
             "postcss-loader",
             "sass-loader"

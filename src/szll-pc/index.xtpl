@@ -39,7 +39,7 @@
       <div class="swiper-container-thumbs">
         <div class="swiper-wrapper">
           <div class="swiper-slide" v-for="(item,index) in teacherList" style='width:464px;margin-right:10px;' :key="item.id">
-            <div flex='main:start cross:center' class='thumbItem my-container-thumbs'>
+            <div flex='main:start cross:center' class='thumbItem'>
               <div class='leftSide' flex='dir:top main:center cross:top'>
                 <img :src="item.img" alt="">
                 <p class='name'>{{item.name}}</p>
