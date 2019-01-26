@@ -1,5 +1,5 @@
 import Vue from "vue";
-import Swiper from 'swiper'
+import Swiper4 from 'swiper'
 import 'swiper/dist/css/swiper.min.css'
 import { Icon, Dialog } from 'element-ui'
 
@@ -29,7 +29,7 @@ new Vue({
       if (res.code == 200) {
         this.teacherList = res.result
         this.$nextTick(() => {
-          const mySwiper = new Swiper('.swiper-container', {
+          const mySwiper = new Swiper4('.swiper-container', {
             on: {
               slideChange: function () {
                 vm.$set(vm.$data, 'activeIndex', this.activeIndex)

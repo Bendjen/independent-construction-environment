@@ -13,7 +13,7 @@
               <p class='name'>{{item.name}}</p>
               <p class='title'>{{item.tit}}</p>
             </div>
-            <div class='rightSide' flex='dir:top main:start cross:top'>
+            <div class='rightSide' flex='dir:top main:star t cross:top'>
               <p v-for='(tag,i) in item.cont' :key='i'>{{tag}}</p>
             </div>
           </div>
@@ -38,9 +38,9 @@
       <!-- swiper的位置难以控制，需要给swiper-container-thumbs加上宽度，在外面自己加一层div控制位置 -->
       <div class="swiper-container-thumbs">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" v-for="(item,index) in teacherList" :key="item.id">
-            <div flex='main:start cross:center' class='thumbItem'>
-              <div class='leftSide' flex='dir:top main:center cross:center'>
+          <div class="swiper-slide" v-for="(item,index) in teacherList" style='width:464px;margin-right:10px;' :key="item.id">
+            <div flex='main:start cross:center' class='thumbItem my-container-thumbs'>
+              <div class='leftSide' flex='dir:top main:center cross:top'>
                 <img :src="item.img" alt="">
                 <p class='name'>{{item.name}}</p>
                 <p class='title'>{{item.tit}}</p>
