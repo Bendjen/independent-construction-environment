@@ -91,7 +91,7 @@
             font-weight: bold;
         }
         .title{
-            font-size: 12px;
+            font-size: 8px;
         }
     }
     .rightSide{
@@ -103,8 +103,8 @@
             text-align: left;
             overflow: hidden;
             width: 100%;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+            // text-overflow: ellipsis;
+            // white-space: nowrap;
         }
     }
 

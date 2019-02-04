@@ -1,10 +1,9 @@
+
 import Vue from "vue";
 import Swiper4 from 'swiper'
 import 'swiper/dist/css/swiper.min.css'
 import { Icon, Dialog } from 'element-ui'
 
-import "./index.scss";
-import "flex.css"
 
 Vue.use(Icon)
 Vue.use(Dialog)
@@ -38,7 +37,7 @@ new Vue({
             thumbs: {
               swiper: {
                 el: '.swiper-container-thumbs',
-                spaceBetween: 10,
+                spaceBetween: 80,
                 slidesPerView: 5,
                 watchSlidesVisibility: true,
               },

@@ -24,11 +24,12 @@
     .swiper-container-thumbs{
         width: 2380px;
         box-sizing: border-box;
-        padding: 0 10px;
+        overflow:visible!important; 
+        padding: 0 80px;
     }
 
     .my-container-thumbs{
-        transform: scale(0.4);
+        transform: scale(0.3);
         overflow: hidden;
         position: relative;
         top: -50px;
@@ -44,6 +45,7 @@
     .slide-thumb-active{
         border: 2px solid blue;
         border-radius: 10px;
+        transform: scale(1.2)
     }
     
     .carouselItem{
@@ -96,8 +98,8 @@
             margin:5px;
             overflow: hidden;
             width: 100%;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+            // text-overflow: ellipsis;
+            // white-space: nowrap;
             &::before{
                 content: '·  '
             }
