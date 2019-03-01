@@ -1,13 +1,12 @@
-#app{
+#szlist{
     color:#4c4e53;
-    width: 100%;
     box-sizing: border-box;
     overflow: hidden;
-    // .carousel{
-    //     transform: scale(0.3);
-    // }
+    position: relative;
+    margin-top: 1.2rem;
+
     .swiperContainer{
-        height: 14rem;
+        // height: 10rem;
         width: 100%;
         // border: 1px solid black;
         position: relative;
@@ -24,16 +23,16 @@
     }
 
     .swiper-container-thumbs{
-        width: 58rem;
+        width: 6rem;
         box-sizing: border-box;
         padding: 0 10px;
     }
 
     .my-container-thumbs{
-        transform: scale(0.4);
+        // transform: scale(0.4);
         overflow: hidden;
         position: relative;
-        top: -2rem;
+        // top: -2rem;
     }
 
     .thumbItem{
@@ -41,9 +40,10 @@
         border-radius: 10px;
         box-sizing: border-box;
         position: relative;
-        height: 12rem;
+        height: 4rem;
+        width: 20rem;
         cursor: pointer;
-        padding: 0.4rem;
+        padding: 0.2rem;
         .leftSide,.rightSide{
             height: 85%;
         }
@@ -57,17 +57,17 @@
         border: #ff9800 2px solid;
         border-radius: 10px;
         box-sizing: border-box;
-        padding: 10px;
+        padding: 0.1rem;
         width: 85%;
-        height: 14rem;
+        height: 4rem;
         position: relative;
         .showDetail{
             cursor: pointer;
-            font-size: 14px;
+            font-size: 12px;
             color:#3ea5d8;
             position: absolute;
-            right: 0.6rem;
-            bottom: 0.6rem;
+            right: 0.2rem;
+            bottom: 0.2rem;
             &:hover{
                 color: #217df3;
             }
@@ -75,13 +75,13 @@
     }
     .leftSide{
         width: 40%;
-        height: 16rem;
         p{
-            margin: 10px;
+            margin: 0;
+            padding: 0
         }
         img{
-            width: 6rem;
-            height:7rem;
+            width: 2rem;
+            height:2.5rem;
             border: 1px solid #e5e5e5;
             border-radius: 5px;
         }
@@ -91,24 +91,25 @@
             font-weight: bold;
         }
         .title{
-            font-size: 12px;
+            font-size: 8px;
         }
     }
     .rightSide{
         width: 60%;
-        height: 12rem;
+        height: 90%;
         p{
-            font-size: 14px;
-            margin:0.2rem;
+            font-size: 12px;
+            // margin:0.2rem;
+            text-align: left;
             overflow: hidden;
-            width: 90%;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+            width: 100%;
+            // text-overflow: ellipsis;
+            // white-space: nowrap;
         }
     }
 
     .percent{
-        margin: 1.4rem 0;
+        margin: 0.2rem 0;
         font-size: 20px;
         em{
             color: #ff9800;
@@ -119,31 +120,41 @@
 
 .popUp{
     font-size: 12px;
+    width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    overflow-x: hidden;
+    position: relative;
+    padding-bottom:0.8rem;
+    box-sizing: border-box; 
     img{
-        width: 6rem;
-        height: 7rem;
+        width: 2rem;
+        height: 2.5rem;
         border: 1px solid #e5e5e5;
     }
     .popTitle{
         font-size: 14px;
-        height: 3rem;
+        height: 0.8rem;
         padding: 0;
         margin: 0;
-        line-height: 3rem;
-        padding-left:0.6rem; 
+        line-height: 0.8rem;
+        padding-left:0.2rem; 
         border-bottom: 1px solid #e5e5e5;
     }
     .popClose{
+        position: absolute;
+        bottom: 0;
         border-top: 1px solid #e5e5e5;
         font-size: 14px;
-        height: 3rem;
+        height: 0.8rem;
         padding: 0;
         margin: 0;
-        line-height: 3rem;
+        width: 100%;
+        line-height: 0.8rem;
         text-align: center;
     }
     .popContent{
-        padding: 1.2rem 0.4rem;
+        padding: 0.4rem;
     }
     .popName{
         color: #ff9800;
