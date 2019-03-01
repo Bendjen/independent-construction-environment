@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#app{
+    background-image: url('http://static.12301.cc/assets/build/images/face_draw/bj.jpg');
+    width:100%;
+    height:100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    .logo{
+        width: 8.2rem;
+        height: 2.5rem;
+        position: absolute;
+        top: 2rem;
+        left:2rem;
+    }
+    .zhuti{
+        width: 25.5rem;
+        height: 19.75rem;
+        position: absolute;
+        top: 15%;
+        left: 15%;
+    }
+    .moreIcon{
+        color: #E2F1FD;
+        font-size: 80px;
+        margin:0 2rem;
+    }
+    .signMember{
+        position: absolute;
+        height: 13rem;
+        bottom: 8%;
+        left: 2%;
+    }
+    .signNumber{
+        background-image: url('http://static.12301.cc/assets/build/images/face_draw/tj_bj.png');
+        height:13rem;
+        width: 13rem;
+        margin-left: 5rem;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        color:#E2F1FD;
+        font-family: Roboto, 'Segoe UI',Arial,'Microsoft Yahei',sans-serif;
+    }
+    .faceItem{
+        color:#E2F2FF;
+        padding: 2rem;
+        img{
+            width: 7rem;
+            height: 7rem;
+            border-radius: 50%;
+            overflow: hidden;
+            background: #E2F2FF;
+        }
+        span{
+            padding-top: 1rem;
+            font-size: 20px;
+        }
+    }
+    .clear{
+        width: 2rem;
+        height: 2rem;
+        cursor: pointer;
+    }
+    .draw{
+        color: #fff;
+        margin-right: 0.5rem;
+        cursor: pointer;
+    }
+    .button{
+        position: absolute;
+        right: 2rem;
+        bottom: 2rem;
+    }
+}
+
+html,body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+
+@-webkit-keyframes rotation{
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
+    }
+    
+    .Rotation{
+    -webkit-transform: rotate(360deg);
+    animation: rotation 5s linear infinite;
+    -moz-animation: rotation 5s linear infinite;
+    -webkit-animation: rotation 5s linear infinite;
+    -o-animation: rotation 5s linear infinite;
+    }

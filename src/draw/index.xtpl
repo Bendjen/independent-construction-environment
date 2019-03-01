@@ -1,0 +1,34 @@
+<div id="app">
+  <img class='logo' src="http://static.12301.cc/assets/build/images/face_draw/logo.png" alt="">
+
+  <div v-if='status == 0'>
+    <img class='zhuti' src="http://static.12301.cc/assets/build/images/face_draw/zhuti.png" alt="">
+    <div class='signMember'>
+      <div style='position: relative' flex='main:right'>
+        <div flex='main:center cross:center'>
+          <div class='moreIcon' v-if='list.length>5'>...</div>
+          <div v-for='item in maxList' :key='item.id' class='faceItem' flex='dir:top main:center cross:center'>
+            <img :src="item.face" alt="">
+            <span>{{item.name}}</span>
+          </div>
+        </div>
+        <div class='signNumber' flex='dir:top main:center cross:center'>
+          <p id='countNum' class='countNum' style='font-size: 60px;margin-bottom: 0.6rem;'>{{num}}</p>
+          <p style='font-size: 20px'>已签到</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div v-else flex='dir:top main:center cross:center'>
+    <img src="http://static.12301.cc/assets/build/images/face_draw/title.png" alt="">
+  </div>
+
+
+  <div class='button' flex='cross:center'>
+    <span class='draw' v-if='status == 0' @click='startDraw'>开始抽奖</span>
+    <span class='draw' v-else @click='backPre'>返回大屏</span>
+    <img src="http://static.12301.cc/assets/build/images/face_draw/clear.png" alt="" class='clear'>
+  </div>
+
+</div>
