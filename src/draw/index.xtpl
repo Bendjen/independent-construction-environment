@@ -6,11 +6,14 @@
     <div class='signMember'>
       <div style='position: relative' flex='main:right'>
         <div flex='main:center cross:center'>
-          <div class='moreIcon' v-if='list.length>5'>...</div>
-          <div v-for='item in maxList' :key='item.id' class='faceItem' flex='dir:top main:center cross:center'>
-            <img :src="item.face" alt="">
-            <span>{{item.name}}</span>
-          </div>
+          <div class='moreIcon' v-if='num>5'>...</div>
+          <transition-group name="list-complete"  flex='main:center cross:center'>
+            <div v-for='(item,index) in list' :key='item.id' class='faceItem' flex='dir:top main:center cross:center'>
+              <img :src="item.header_url" alt="">
+              <span>{{item.name}}</span>
+            </div>
+          </transition-group>
+
         </div>
         <div class='signNumber' flex='dir:top main:center cross:center'>
           <p id='countNum' class='countNum' style='font-size: 60px;margin-bottom: 0.6rem;'>{{num}}</p>

@@ -46,6 +46,7 @@
     .faceItem{
         color:#E2F2FF;
         padding: 2rem;
+        transform: translateX(-250);
         img{
             width: 7rem;
             height: 7rem;
@@ -54,6 +55,9 @@
             background: #E2F2FF;
         }
         span{
+            display: inline-block;
+            // max-width: 1rem;
+            overflow: hidden;
             padding-top: 1rem;
             font-size: 20px;
         }
@@ -84,16 +88,16 @@ html,body{
     margin: 0;
 }
 
-
-@-webkit-keyframes rotation{
-    from {-webkit-transform: rotate(0deg);}
-    to {-webkit-transform: rotate(360deg);}
-    }
-    
-    .Rotation{
-    -webkit-transform: rotate(360deg);
-    animation: rotation 5s linear infinite;
-    -moz-animation: rotation 5s linear infinite;
-    -webkit-animation: rotation 5s linear infinite;
-    -o-animation: rotation 5s linear infinite;
-    }
+.list-complete-item {
+    transition: all 1s;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .list-complete-enter, .list-complete-leave-to
+  /* .list-complete-leave-active for below version 2.1.8 */ {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  .list-complete-leave-active {
+    position: absolute;
+  }
